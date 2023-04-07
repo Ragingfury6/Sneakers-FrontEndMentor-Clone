@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --flow-size: 1rem;
+}
+
+.flow > * + * {
+  margin-top: var(--flow-size);
+}
+@media screen and (min-width:1440px){
+    .flow > * + * {
+        margin-top: calc(var(--flow-size) * 2);
+      }
+}
+.flow__child--large {
+  margin-block: calc(var(--flow-size) * 1.5);
+}
+@media screen and (min-width:1440px){
+    .flow__child--large {
+        margin-block: calc(var(--flow-size) * 2.25);
+      }
+}
+.box-shadow {
+  box-shadow: 0px 3px 20px 10px rgba(255, 125, 26, 0.15);
+}
+.logo{
+    width:clamp(10rem, 7vw, 30rem);
+}

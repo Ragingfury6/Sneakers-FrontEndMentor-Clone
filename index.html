@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./tailwind.css" />
+    <title>Frontend Mentor | E-commerce product page</title>
+  </head>
+  <body>
+    <nav class="p-4 bg-white w-full">
+      <div
+        class="w-full 2xl:w-3/4 mx-auto flex justify-between 2xl:border-b border-b-grayblue 2xl:pt-4 2xl:pb-8"
+      >
+        <div class="flex items-center gap-4 2xl:gap-20">
+          <img src="./images/icon-menu.svg" alt="Menu" class="2xl:hidden" />
+          <img src="./images/logo.svg" alt="Sneakers Logo" class="logo" />
+          <div class="hidden 2xl:block">
+            <ul
+              class="list-none hidden 2xl:flex 2xl:gap-12 text-darkgrayblue text-lg"
+            >
+              <li>Collections</li>
+              <li>Men</li>
+              <li>Women</li>
+              <li>About</li>
+              <li>Contact</li>
+            </ul>
+          </div>
+        </div>
+        <div class="flex items-center gap-6 2xl:gap-16">
+          <img src="./images/icon-cart.svg" alt="Cart" class="2xl:w-8" />
+          <img
+            src="./images/image-avatar.png"
+            alt="Avatar"
+            class="w-8 aspect-square 2xl:w-16"
+          />
+        </div>
+      </div>
+    </nav>
+    <main
+      class="grid grid-cols-1 2xl:grid-cols-2 2xl:py-20 items-center justify-items-center 2xl:gap-16"
+    >
+      <div class="container relative 2xl:w-3/4 2xl:ml-auto">
+        <img
+          src="./images/image-product-1.jpg"
+          alt="Shoe Image"
+          class="object-cover w-full aspect-[8/5] 2xl:rounded-2xl 2xl:aspect-square 2xl:w-3/4 2xl:mx-auto"
+        />
+        <button
+          class="bg-white rounded-full w-12 aspect-square grid place-items-center text-black absolute top-1/2 -translate-y-1/2 right-4 2xl:hidden"
+        >
+          <img src="./images/icon-next.svg" alt="Next" class="" />
+        </button>
+        <button
+          class="bg-white rounded-full w-12 aspect-square grid place-items-center text-black absolute top-1/2 -translate-y-1/2 left-4 2xl:hidden"
+        >
+          <img src="./images/icon-previous.svg" alt="Previous" class="" />
+        </button>
+        <div class="hidden 2xl:grid 2xl:grid-cols-4 justify-between gap-8 mt-8 2xl:w-3/4 2xl:mx-auto">
+          <img src="./images/image-product-1-thumbnail.jpg" alt="" class="rounded-xl"/>
+          <img src="./images/image-product-2-thumbnail.jpg" alt="" class="rounded-xl"/>
+          <img src="./images/image-product-3-thumbnail.jpg" alt="" class="rounded-xl"/>
+          <img src="./images/image-product-4-thumbnail.jpg" alt="" class="rounded-xl"/>
+        </div>
+      </div>
+      <section class="font-body p-4 flow 2xl:w-3/4 2xl:max-w-full 2xl:mr-auto">
+        <p
+          class="font-bold text-orange uppercase tracking-wide text-sm 2xl:text-base"
+        >
+          Sneaker Company
+        </p>
+        <h2 class="text-3xl text-darkblue font-bold 2xl:text-6xl 2xl:mb-12">
+          Fall Limited Edition Sneakers
+        </h2>
+        <p
+          class="text-darkgrayblue text-base 2xl:max-w-[35rem] 2xl:text-xl tracking-wide leading-7"
+        >
+          These low-profile sneakers are your perfect casual wear companion.
+          Featuring a durable rubber outer sole, they’ll withstand everything
+          the weather can offer.
+        </p>
+        <div
+          class="flex items-center flow__child--large 2xl:flex-col 2xl:items-start 2xl:gap-2"
+        >
+          <div class="flex items-center gap-4">
+            <p class="text-black text-3xl font-bold 2xl:text-4xl">$125.00</p>
+            <div
+              class="bg-paleorange text-orange text-lg font-bold rounded-md px-2 2xl:text-xl"
+            >
+              50%
+            </div>
+          </div>
+          <p
+            class="text-grayblue text-lg font-bold line-through ml-auto 2xl:text-xl 2xl:ml-0"
+          >
+            $250.00
+          </p>
+        </div>
+        <div
+          class="grid grid-cols-1 2xl:grid-cols-[1fr_2fr] gap-4 2xl:max-w-[35rem]"
+        >
+          <div
+            class="flex justify-between bg-lightgrayblue rounded-xl p-4 items-center"
+          >
+            <img
+              src="./images/icon-minus.svg"
+              alt="Minus"
+              class="w-4 text-orange cursor-pointer"
+            />
+            <p class="text-black font-bold 2xl:text-xl">0</p>
+            <img
+              src="./images/icon-plus.svg"
+              alt="Plus"
+              class="w-4 text-orange cursor-pointer"
+            />
+          </div>
+          <button
+            class="flex justify-center gap-4 items-center bg-orange rounded-xl w-full p-4 box-shadow"
+          >
+            <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z"
+                fill="#fff"
+                fill-rule="nonzero"
+              />
+            </svg>
+            <p class="text-white font-bold text-xl">Add to Cart</p>
+          </button>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
+<!-- Collections
+  Men
+  Women
+  About
+  Contact
+
+  Sneaker Company
+
+  Fall Limited Edition Sneakers
+
+  These low-profile sneakers are your perfect casual wear companion. Featuring a 
+  durable rubber outer sole, they’ll withstand everything the weather can offer.
+
+  $125.00
+  50%
+  $250.00
+
+  0
+  Add to cart -->
