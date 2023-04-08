@@ -17,12 +17,13 @@
       href="./images/favicon-32x32.png"
     />
     <link rel="stylesheet" href="./tailwind.css" />
+    <script src="index.js" defer></script>
     <title>Frontend Mentor | E-commerce product page</title>
   </head>
   <body>
-    <nav class="p-4 bg-white w-full">
+    <nav class="p-4 2xl:p-0 bg-white w-full">
       <div
-        class="w-full 2xl:w-3/4 mx-auto flex justify-between 2xl:border-b border-b-grayblue 2xl:pt-4 2xl:pb-8"
+        class="w-full 2xl:w-3/4 mx-auto flex justify-between 2xl:border-b border-b-grayblue"
       >
         <div class="flex items-center gap-4 2xl:gap-20">
           <img src="./images/icon-menu.svg" alt="Menu" class="2xl:hidden" />
@@ -31,11 +32,11 @@
             <ul
               class="list-none hidden 2xl:flex 2xl:gap-12 text-darkgrayblue text-lg"
             >
-              <li>Collections</li>
-              <li>Men</li>
-              <li>Women</li>
-              <li>About</li>
-              <li>Contact</li>
+              <li class="hover:border-b-orange focus-within:border-b-orange focus-within:text-fadedblack border-b-4 border-b-white border-opacity-0 hover:text-fadedblack transition"><a href="#" class="leading-[7.5rem]">Collections</a></li>
+              <li class="hover:border-b-orange focus-within:border-b-orange focus-within:text-fadedblack border-b-4 border-b-white border-opacity-0 hover:text-fadedblack transition"><a href="#" class="leading-[7.5rem]">Men</a></li>
+              <li class="hover:border-b-orange focus-within:border-b-orange focus-within:text-fadedblack border-b-4 border-b-white border-opacity-0 hover:text-fadedblack transition"><a href="#" class="leading-[7.5rem]">Women</a></li>
+              <li class="hover:border-b-orange focus-within:border-b-orange focus-within:text-fadedblack border-b-4 border-b-white border-opacity-0 hover:text-fadedblack transition"><a href="#" class="leading-[7.5rem]">About</a></li>
+              <li class="hover:border-b-orange focus-within:border-b-orange focus-within:text-fadedblack border-b-4 border-b-white border-opacity-0 hover:text-fadedblack transition"><a href="#" class="leading-[7.5rem]">Contact</a></li>
             </ul>
           </div>
         </div>
@@ -52,11 +53,12 @@
     <main
       class="grid grid-cols-1 2xl:grid-cols-2 2xl:py-20 items-center justify-items-center 2xl:gap-16"
     >
-      <div class="container relative 2xl:w-3/4 2xl:ml-auto">
+      <div class="relative 2xl:w-3/4 2xl:ml-auto">
         <img
           src="./images/image-product-1.jpg"
           alt="Shoe Image"
           class="object-cover w-full aspect-[8/5] 2xl:rounded-2xl 2xl:aspect-square 2xl:w-3/4 2xl:mx-auto"
+          id="Main Image"
         />
         <button
           class="bg-white rounded-full w-12 aspect-square grid place-items-center text-black absolute top-1/2 -translate-y-1/2 right-4 2xl:hidden"
@@ -68,12 +70,50 @@
         >
           <img src="./images/icon-previous.svg" alt="Previous" class="" />
         </button>
-        <div class="hidden 2xl:grid 2xl:grid-cols-4 justify-between gap-8 mt-8 2xl:w-3/4 2xl:mx-auto">
-          <img src="./images/image-product-1-thumbnail.jpg" alt="" class="rounded-xl"/>
-          <img src="./images/image-product-2-thumbnail.jpg" alt="" class="rounded-xl"/>
-          <img src="./images/image-product-3-thumbnail.jpg" alt="" class="rounded-xl"/>
-          <img src="./images/image-product-4-thumbnail.jpg" alt="" class="rounded-xl"/>
-        </div>
+        <ul
+          class="hidden 2xl:grid 2xl:grid-cols-4 justify-between gap-8 mt-8 2xl:w-3/4 2xl:mx-auto list-none"
+        >
+          <li>
+            <button class="relative group thumbnail" data-product="1">
+              <img
+                src="./images/image-product-1-thumbnail.jpg"
+                alt=""
+                class="rounded-xl"
+              />
+              <div class="absolute inset-0 bg-lightgrayblue rounded-xl bg-opacity-60 opacity-0 border-2 border-white border-opacity-0 group-focus-within:border-orange group-focus-within:opacity-100 group-hover:opacity-100 transition"></div>
+            </button>
+          </li>
+          <li>
+            <button class="relative group thumbnail" data-product="2">
+              <img
+                src="./images/image-product-2-thumbnail.jpg"
+                alt=""
+                class="rounded-xl"
+              />
+              <div class="absolute inset-0 bg-lightgrayblue rounded-xl bg-opacity-60 opacity-0 border-2 border-white border-opacity-0 group-focus-within:border-orange group-focus-within:opacity-100 group-hover:opacity-100 transition"></div>
+            </button>
+          </li>
+          <li>
+            <button class="relative group thumbnail" data-product="3">
+              <img
+                src="./images/image-product-3-thumbnail.jpg"
+                alt=""
+                class="rounded-xl"
+              />
+              <div class="absolute inset-0 bg-lightgrayblue rounded-xl bg-opacity-60 opacity-0 border-2 border-white border-opacity-0 group-focus-within:border-orange group-focus-within:opacity-100 group-hover:opacity-100 transition"></div>
+            </button>
+          </li>
+          <li>
+            <button class="relative group thumbnail" data-product="4">
+              <img
+                src="./images/image-product-4-thumbnail.jpg"
+                alt=""
+                class="rounded-xl"
+              />
+              <div class="absolute inset-0 bg-lightgrayblue rounded-xl bg-opacity-60 opacity-0 border-2 border-white border-opacity-0 group-focus-within:border-orange group-focus-within:opacity-100 group-hover:opacity-100 transition"></div>
+            </button>
+          </li>
+        </ul>
       </div>
       <section class="font-body p-4 flow 2xl:w-3/4 2xl:max-w-full 2xl:mr-auto">
         <p
@@ -114,20 +154,24 @@
           <div
             class="flex justify-between bg-lightgrayblue rounded-xl p-4 items-center"
           >
-            <img
-              src="./images/icon-minus.svg"
-              alt="Minus"
-              class="w-4 text-orange cursor-pointer"
-            />
+            <button>
+              <img
+                src="./images/icon-minus.svg"
+                alt="Minus"
+                class="w-4 cursor-pointer hover:opacity-75 transition"
+              />
+            </button>
             <p class="text-black font-bold 2xl:text-xl">0</p>
-            <img
-              src="./images/icon-plus.svg"
-              alt="Plus"
-              class="w-4 text-orange cursor-pointer"
-            />
+            <button>
+              <img
+                src="./images/icon-plus.svg"
+                alt="Plus"
+                class="w-4 cursor-pointer hover:opacity-75 transition"
+              />
+            </button>
           </div>
           <button
-            class="flex justify-center gap-4 items-center bg-orange rounded-xl w-full p-4 box-shadow"
+            class="flex justify-center gap-4 items-center bg-orange transition hover:bg-opacity-60 rounded-xl w-full p-4 box-shadow"
           >
             <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg">
               <path

@@ -28,3 +28,7 @@
 .logo{
     width:clamp(10rem, 7vw, 30rem);
 }
+.thumbnail-active{
+  border: 3px solid hsl(26,100%,55%);
+  border-radius: 0.75rem;
+}
